@@ -10,7 +10,7 @@ public class PiglatinTranslator {
    * @param s The sentence in English
    * @return The pig latin version
    */
-  private static String piglatin( String s ) {
+  public static String piglatin( String s ) {
     String latin = "";
     int i = 0;
     while ( i <= s.length() ) {
