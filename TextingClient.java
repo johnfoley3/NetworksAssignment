@@ -8,6 +8,7 @@ import java.io.DataOutputStream;
 public class TextingClient {
 
    public static final int PORT = 32566;
+    
    public static final int MAX_BUF_SIZE = 256;
 
    /**
