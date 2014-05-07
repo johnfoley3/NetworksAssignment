@@ -37,19 +37,13 @@ public class Translator {
       "I'm feeling drowsy",
       "am"};
 
-   /** Convert a String to its texting translation, if possible.
+   /** Convert a String to its piglatin translation
     * @param originalWord the word to translate
     * @return the translated word, if it has a translation.
     */
    public static String translate(String originalWord)
    {
-      for (int i = 0; i < ORIG.length; i++) {
-         if (originalWord.compareTo(ORIG[i]) == 0) {
-            return TRANSLATED[i];
-         }
-      }
-      // Word not found in translation list.
-      return originalWord;
+      
    }
 
 }

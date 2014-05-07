@@ -7,7 +7,7 @@ import java.io.DataOutputStream;
 public class CodeServer {
 
    // Don't everybody use this port number!  It will cause havoc.
-   public static final int PORT = 32555;
+   public static final int PORT = 32566;
 
    private static final boolean DEBUG = true;
 

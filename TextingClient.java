@@ -7,7 +7,7 @@ import java.io.DataOutputStream;
 /** Demonstrate the client side of a simple client-server system. */
 public class TextingClient {
 
-   public static final int PORT = 32555;
+   public static final int PORT = 32566;
    public static final int MAX_BUF_SIZE = 256;
 
    /**
