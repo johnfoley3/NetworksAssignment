@@ -20,6 +20,10 @@ public class PiglatinTranslator {
         latin = latin + s.charAt( i );
         i++;
       }
+        
+         // If there aren't any words left, stop.
+      if ( i >= s.length() ) break;
+
 
       // Beginning of word
       int begin = i;
@@ -28,9 +32,7 @@ public class PiglatinTranslator {
         i++;
       }
         
-        // If there aren't any words left, stop.
-      if ( i >= s.length() ) break;
-
+       
       // End of word, translate
       int end = i;
         
