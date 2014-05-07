@@ -31,6 +31,8 @@ public class PiglatinTranslator {
       // End of word, translate
       int end = i;
         
+        System.out.println(latin);
+        
       latin = latin + pigWord( s.substring( begin, end ) );
     }
       
