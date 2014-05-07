@@ -60,12 +60,12 @@ public class PiglatinTranslator {
       
     int split = firstVowel( word );
       
-      firstLetter = word.charAt(0);
-      firstVowel = word.charAt(split);
+      char firstLetter = word.charAt(0);
+      char firstVowel = word.charAt(split);
       
       if (firstLetter >= 'A' && firstLetter <= 'Z') {
-          word.charAt(0) = firstLetter.toLowerCase();
-          word.charAt( split + 1 ) = firstVowel.toUpperCase();
+          word.charAt(0) = Character.toLowerCase(firstLetter);
+          word.charAt( split + 1 ) = Character.toUpperCase(firstVowel);
       }
       
     return word.substring( split ) + "-" + word.substring( 0, split ) + "ay";
