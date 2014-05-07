@@ -31,12 +31,9 @@ public class PiglatinTranslator {
       while ( i < s.length() && isLetter( s.charAt( i ) ) ) {
         i++;
       }
-        
        
       // End of word, translate
       int end = i;
-        
-        System.out.println(latin);
         
       latin = latin + pigWord( s.substring( begin, end ) );
     }
@@ -60,8 +57,19 @@ public class PiglatinTranslator {
    * @return The pig latin version
    */
   private static String pigWord( String word ) {
+      
     int split = firstVowel( word );
+      
+      firstLetter = word.charAt(0);
+      firstVowel = word.charAt(split);
+      
+      if (firstLetter >= 'A' && firstLetter <= 'Z') {
+          word.charAt(0) = firstLetter.toLowerCase();
+          word.charAt( split + 1 ) = firstVowel.toUpperCase();
+      }
+      
     return word.substring( split ) + "-" + word.substring( 0, split ) + "ay";
+      
   }
 
   /**
@@ -77,6 +85,6 @@ public class PiglatinTranslator {
           word.charAt(i)=='u' || word.charAt(i)=='y' )
         return i;
     return 0;
-  }
+  } 
 
 }
