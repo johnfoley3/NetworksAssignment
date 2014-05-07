@@ -102,7 +102,7 @@ public class CodeServer {
             try {
                writeStringToSock (
                      out, 
-                     Translator.piglatin( originalWord ) );
+                     PiglatinTranslator.piglatin( originalWord ) );
             } catch (IOException e) {
                System.out.println (
                      "Error writing translated String to socket.");
@@ -110,7 +110,7 @@ public class CodeServer {
 
             if (DEBUG) {
                System.out.println ("Server sending \""
-                     + Translator.piglatin( originalWord )
+                     + PiglatinTranslator.piglatin( originalWord )
                      + "\" to client.");
             }
 
