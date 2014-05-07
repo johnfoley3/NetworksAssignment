@@ -13,7 +13,7 @@ public class PiglatinTranslator {
   public static String piglatin( String s ) {
     String latin = "";
     int i = 0;
-    while ( i <= s.length() ) {
+    while ( i < s.length() ) {
 
       // Take care of punctuation and spaces
       while ( i < s.length() && !isLetter( s.charAt( i ) ) ) {
@@ -27,6 +27,9 @@ public class PiglatinTranslator {
       while ( i < s.length() && isLetter( s.charAt( i ) ) ) {
         i++;
       }
+        
+        // If there aren't any words left, stop.
+      if ( i >= s.length() ) break;
 
       // End of word, translate
       int end = i;
