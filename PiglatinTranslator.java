@@ -1,4 +1,4 @@
-import java.io.*;
+import java.util.Scanner;
 
 /**
  * Translates text into piglatin.
@@ -15,24 +15,24 @@ public class PiglatinTranslator {
         int i = 0;
         while ( i < s.length() ) {
 
-// Take care of punctuation and spaces
+            // Take care of punctuation and spaces
             while ( i < s.length() && !isLetter( s.charAt( i ) ) ) {
                 latin = latin + s.charAt( i );
                 i++;
             }
 
-// If there aren't any words left, stop.
+            // If there aren't any words left, stop.
             if ( i >= s.length() ) break;
 
 
-// Beginning of word
+            // Beginning of word
             int begin = i;
 
             while ( i < s.length() && isLetter( s.charAt( i ) ) ) {
                 i++;
             }
 
-// End of word, translate
+            // End of word, translate
             int end = i;
 
             latin = latin + pigWord( s.substring( begin, end ) );
@@ -63,7 +63,10 @@ public class PiglatinTranslator {
         char firstLetter = word.charAt(0);
 
         if (firstLetter >= 'A' && firstLetter <= 'Z') {
-            word = word.substring(0).toLowerCase() + word.substring( 1, split ) + word.substring(split) + word.substring(split, word.length());
+            word = word.substring(0, 1).toLowerCase() + word.substring(1, split) +
+                    word.substring( split, split+1 ).toUpperCase() +
+                    word.substring(split+1, word.length());
+            System.out.println(word);
         }
 
         return word.substring( split ) + "-" + word.substring( 0, split ) + "ay";
