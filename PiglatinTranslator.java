@@ -59,17 +59,21 @@ public class PiglatinTranslator {
     private static String pigWord( String word ) {
 
         int split = firstVowel( word );
+        boolean upper = false;
 
-        char firstLetter = word.charAt(0);
-
-        if (firstLetter >= 'A' && firstLetter <= 'Z') {
-            word = word.substring(0, 1).toLowerCase() + word.substring(1, split) +
-                    word.substring( split, split+1 ).toUpperCase() +
-                    word.substring(split+1, word.length());
-            System.out.println(word);
+        if (word.charAt(0) >= 'A' && word.charAt(0) <= 'Z') {
+            upper = true;
         }
 
-        return word.substring( split ) + "-" + word.substring( 0, split ) + "ay";
+        word = word.toLowerCase();
+
+        String piglatinWord = word.substring( split ) + "-" + word.substring( 0, split ) + "ay";
+
+        if (upper) {
+            piglatinWord = piglatinWord.substring(0, 1).toUpperCase() + piglatinWord.substring(1);
+        }
+
+        return piglatinWord;
 
     }
 
