@@ -49,12 +49,6 @@ public class CodeClient {
                 System.exit(-1);
             }
 
-            // Debug statement
-            System.out.println("Connecting to "
-                    + server
-                    + " on port "
-                    + PORT);
-
           /*
            * At this point, the connection is established,
            * but we have no way of reading and writing to it.
@@ -96,8 +90,6 @@ public class CodeClient {
                 System.out.println("Error writing String to socket.");
                 System.exit(-1);
             }
-
-            System.out.println("Sending \"" + toTranslate + "\" to server.");
 
             String reply = null;
             try {
