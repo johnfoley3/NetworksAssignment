@@ -107,7 +107,7 @@ public class CodeClient {
                 System.exit(-1);
             }
 
-            System.out.println("Received: \"" + reply + "\" from server.");
+            System.out.println("TRANSLATION: " + reply);
 
             // Clean up
             in = null;

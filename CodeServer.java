@@ -9,7 +9,7 @@ public class CodeServer {
    // Don't everybody use this port number!  It will cause havoc.
    public static final int PORT = 32566;
 
-   private static final boolean DEBUG = true;
+   private static final boolean DEBUG = false;
 
    public static void main(String[] args)
    {
