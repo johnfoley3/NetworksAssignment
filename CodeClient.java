@@ -31,7 +31,7 @@ public class CodeClient {
         System.out.println("Please enter some text:");
         String toTranslate = scan.nextLine();
 
-        while (toTranslate != "END") {
+        while (!toTranslate.equals("END")) {
 
           /*
            * Open a TCP connection with a remote socket address of
